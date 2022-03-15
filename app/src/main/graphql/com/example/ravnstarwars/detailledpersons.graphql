@@ -1,0 +1,13 @@
+query DetailedPersonsStarWars($id: ID){
+    person(id: $id){
+        eyeColor
+        hairColor
+        skinColor
+        birthYear
+        vehicleConnection{
+            vehicles {
+                name
+            }
+        }
+    }
+}
