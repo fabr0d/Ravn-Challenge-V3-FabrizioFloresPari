@@ -33,6 +33,7 @@ class AllPeopleActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_allpeople_list)
         myAllPeopleListAdapter = AllPeopleAdapter(this, myPeopleList)
+        myAllPeopleListAdapter.onItemClickListener { person -> getDetailOf(person.id) }
         rv_all_people.adapter = myAllPeopleListAdapter
         rv_all_people.layoutManager = LinearLayoutManager(this)
         // CoroutineScope to use threads
@@ -109,4 +110,10 @@ class AllPeopleActivity : AppCompatActivity() {
         Successful
     }
 
+    // Extra intent that is id of clicked character
+    private fun getDetailOf(id: String) {
+        val extraIntent = Intent(this,  DetailledPersonsActivity::class.java)
+        extraIntent.putExtra("id", id)
+        startActivity(extraIntent)
+    }
 }

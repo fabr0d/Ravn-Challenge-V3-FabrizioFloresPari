@@ -8,9 +8,10 @@
     <string name="birth_year">Birth Year</string>
     <string name="eye_color">Eye Color</string>
     <string name="hair_color">Hair Color</string>
+    <string name="gender">Gender</string>
     <string name="skin_color">Skin Color</string>
-    <string name="vehicles">Vehicles</string>
-    <string name="no_vehicle">No Vehicle</string>
+    <string name="created">Created</string>
+    <string name="edited">Edited</string>
     <string name="unknown">Unknown</string>
     <dimen name="text_size">17sp</dimen>
 </resources>
